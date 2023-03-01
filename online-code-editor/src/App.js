@@ -6,7 +6,6 @@ import useLocalStorage from "./hooks/useLocalStorage"
 function App() {
   const [html, setHtml] = useLocalStorage('html', '')
   const [css, setCss] = useLocalStorage('css', '')
-  const [javascript, setJavascript] = useLocalStorage('javascript', '')
   const [srcDoc, setSrcDoc] = useState('')
 
   useEffect(() => {
@@ -15,13 +14,13 @@ function App() {
         <html>
           <body>${html}</body>
           <style>${css}</style>
-          <script>${javascript}</script>
+          
         </html>
       `)
     }, 250)
     // console.log(srcDoc)
     return () => clearTimeout(timeout)
-  }, [html, css, javascript])
+  },
 
   return (
     <div className="app">
@@ -37,12 +36,6 @@ function App() {
           label="CSS"
           value={css}
           onChange={setCss}
-        />
-        <Editor
-          launguage="javascript"
-          label="JavaScript"
-          value={javascript}
-          onChange={setJavascript}
         />
       </div>
       <div className="bottom-pane">
