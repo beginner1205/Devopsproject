@@ -38,7 +38,12 @@ function App() {
           value={css}
           onChange={setCss}
         />
-        
+        <Editor
+          launguage="javascript"
+          label="JavaScript"
+          value={javascript}
+          onChange={setJavascript}
+        />
       </div>
       <div className="bottom-pane">
         <iframe
