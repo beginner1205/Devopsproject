@@ -37,12 +37,12 @@ function Root() {
           value={css}
           onChange={setCss}
         />
-        <Editor
+        {/* <Editor
           launguage="javascript"
           label="JavaScript"
           value={javascript}
           onChange={setJavascript}
-        />
+        /> */}
       </>
         
       
